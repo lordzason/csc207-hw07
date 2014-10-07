@@ -40,12 +40,15 @@ public class UshahidiExtensions
 
         if (clientID <= lowestIDIncident.getId())
           {
+            pen.println(lowestIDIncident);
             lowestIDIncident = client.nextIncident();
           }//if()
         else if (clientID >= highestIDIncident.getId())
           {
+            pen.println(highestIDIncident);
             highestIDIncident = client.nextIncident();
           }//else if()
+
       }//while()
 
   }//printExtremeIncidents()

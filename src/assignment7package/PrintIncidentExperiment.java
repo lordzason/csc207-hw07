@@ -1,6 +1,7 @@
 package assignment7package;
 
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import edu.grinnell.glimmer.ushahidi.UshahidiCategory;
@@ -41,7 +42,14 @@ public class PrintIncidentExperiment
       UshahidiExtensions.printIncident(pen, client.nextIncident());
 
       // One that requires connecting to the server
-      UshahidiClient webclient = new UshahidiWebClient("https://farmersmarket.crowdmap.com/");
-      UshahidiExtensions.printIncident(pen, webclient.nextIncident());
+      UshahidiClient webClient = new UshahidiWebClient("https://farmersmarket.crowdmap.com/");
+      UshahidiExtensions.printIncident(pen, webClient.nextIncident());
+      
+      //Printing incidents within dates
+      LocalDateTime a = LocalDateTime.of(2000, 1, 1, 12, 00);
+      LocalDateTime b = LocalDateTime.of(2020, 12, 31, 12, 00);
+      Extra1.printIncidentsWithinDates(client, a, b, pen);
+      Extra1.printIncidentsWithinDates(webClient, a, b, pen);
+      
     } // main(String[])
 }
