@@ -1,3 +1,7 @@
+/**
+ * Help from Mira Hall
+ */
+
 package assignment7package;
 
 import java.io.PrintWriter;
@@ -12,6 +16,7 @@ public class UshahidiExtensions
    * Prints an incident out using a format
    */
   public static void printIncident(PrintWriter pen, UshahidiIncident incident)
+  throws Exception
   {
     pen.println("Incident #: " + incident.getTitle());
     pen.println("  " + incident.getDescription());

@@ -26,16 +26,14 @@ public class PrintIncidentExperiment
       UshahidiExtensions.printIncident(pen, UshahidiUtils.randomIncident());
 
       // A newly created incident
-      /*int testId = 999;
+      int testId = 999;
       String incidentName = "IncidentName";
       LocalDateTime testDateTime = LocalDateTime.now();
       UshahidiLocation testLocation = new UshahidiLocation(100, "Test", 999, 999);
       String testDescription = "Test Description";
       UshahidiCategory testCategory = new UshahidiCategory(101, "Test Category Name");
       UshahidiIncident myIncident = new UshahidiIncident(testId, incidentName, testDateTime, testLocation, testDescription, testCategory);
-      */
-      //UshahidiIncident myIncident = new UshahidiIncident();
-      //UshahidiExtensions.printIncident(pen, myIncident);
+      UshahidiExtensions.printIncident(pen, myIncident);
 
       // One from a list
       UshahidiClient client = UshahidiUtils.SAMPLE_CLIENT;
